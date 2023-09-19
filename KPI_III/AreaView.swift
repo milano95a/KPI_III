@@ -4,6 +4,7 @@ struct AreaView: View {
     
     @ObservedObject var manager: Manager
     @State var showEditor = false
+    @State var showDeleteAlert = false
     
     let area: Area
     let onTap: (Int, Int) -> Void
@@ -21,6 +22,18 @@ struct AreaView: View {
                 .popover(isPresented: $showEditor) {
                     KPIEditorView(manager: manager, gkpi: area)
                 }
+                .alert("Delete \(area.name)?", isPresented: $showDeleteAlert, actions: {
+                    Button(role: .destructive, action: {
+                        onDeleteAreaTap()
+                    }, label: {
+                        Text("Delete")
+                    })
+                    Button(role: .cancel, action: {
+                        
+                    }, label: {
+                        Text("Cancel")
+                    })
+                })
         }
     }
     
@@ -52,7 +65,7 @@ struct AreaView: View {
         }
         ToolbarItem(placement: .navigationBarLeading) {
             Button(action: {
-                onDeleteAreaTap()
+                showDeleteAlert.toggle()
             }, label: {
                 Label("", systemImage: "trash").foregroundColor(.red1)
             })
