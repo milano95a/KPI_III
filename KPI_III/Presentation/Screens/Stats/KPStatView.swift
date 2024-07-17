@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct HomeView: View {
+struct KPStatView: View {
     @ObservedObject var manager: Manager
     @State var showEditorGKPI = false
     
@@ -83,6 +83,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(manager: Manager())
+        KPStatView(manager: Manager())
     }
 }

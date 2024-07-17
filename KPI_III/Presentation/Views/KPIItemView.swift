@@ -47,20 +47,22 @@ struct KPI: Identifiable, Codable {
     var repetition: Repetition
     var lastUpdate: Date
     
-    mutating func addCounter() {
-        counters.append(Counter())
-        lastUpdate = Date()
+    mutating func addCounters(_ count: Int) {
+        for _ in 0..<count {
+            counters.append(Counter())
+            lastUpdate = Date()
+        }
     }
     
-    func shouldAddCounter() -> Bool {
+    func numberOfCountersShouldAdd() -> Int {
         if counters.isEmpty {
-            return true
-        }else if repetition == .monthly {
-            return !self.lastUpdate.isSameMonth(Date())
+            return 1
+        } else if repetition == .monthly {
+            return self.lastUpdate.numberOfMonthsSince()
         } else if repetition == .weekly {
-            return !self.lastUpdate.isSameWeek(Date())
+            return self.lastUpdate.numberOfWeeksSince()
         } else {
-            return !self.lastUpdate.isSameDay(Date())
+            return self.lastUpdate.numberOfDaysSince()
         }
     }
 }

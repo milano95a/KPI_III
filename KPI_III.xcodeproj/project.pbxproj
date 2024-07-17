@@ -13,11 +13,11 @@
 		BD7359FA29F9A5AA00766F9A /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7359F929F9A5AA00766F9A /* CounterView.swift */; };
 		BD7359FC29F9A63700766F9A /* KPIItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7359FB29F9A63700766F9A /* KPIItemView.swift */; };
 		BD7359FE29F9A80700766F9A /* AreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7359FD29F9A80700766F9A /* AreaView.swift */; };
-		BD735A2829FD35D000766F9A /* AreasTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD735A2729FD35D000766F9A /* AreasTabView.swift */; };
-		BD735A2A29FD3B2B00766F9A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD735A2929FD3B2B00766F9A /* HomeView.swift */; };
+		BD735A2829FD35D000766F9A /* KPMainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD735A2729FD35D000766F9A /* KPMainTabView.swift */; };
+		BD735A2A29FD3B2B00766F9A /* KPStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD735A2929FD3B2B00766F9A /* KPStatView.swift */; };
 		BD735A2C29FD8F0800766F9A /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD735A2B29FD8F0800766F9A /* Manager.swift */; };
-		BD735A2E29FEE9CA00766F9A /* AwsomeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD735A2D29FEE9CA00766F9A /* AwsomeExtensions.swift */; };
-		BD735A3029FEF1FD00766F9A /* KPIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD735A2F29FEF1FD00766F9A /* KPIExtensions.swift */; };
+		BD735A2E29FEE9CA00766F9A /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD735A2D29FEE9CA00766F9A /* Date+Ext.swift */; };
+		BD735A3029FEF1FD00766F9A /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD735A2F29FEF1FD00766F9A /* Color+Ext.swift */; };
 		BDD0F6362A06AB0B00E4608B /* AreaEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0F6352A06AB0B00E4608B /* AreaEditorView.swift */; };
 		BDD0F6382A06AB5F00E4608B /* KPIEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0F6372A06AB5F00E4608B /* KPIEditorView.swift */; };
 /* End PBXBuildFile section */
@@ -30,11 +30,11 @@
 		BD7359F929F9A5AA00766F9A /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		BD7359FB29F9A63700766F9A /* KPIItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPIItemView.swift; sourceTree = "<group>"; };
 		BD7359FD29F9A80700766F9A /* AreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaView.swift; sourceTree = "<group>"; };
-		BD735A2729FD35D000766F9A /* AreasTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreasTabView.swift; sourceTree = "<group>"; };
-		BD735A2929FD3B2B00766F9A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		BD735A2729FD35D000766F9A /* KPMainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPMainTabView.swift; sourceTree = "<group>"; };
+		BD735A2929FD3B2B00766F9A /* KPStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPStatView.swift; sourceTree = "<group>"; };
 		BD735A2B29FD8F0800766F9A /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
-		BD735A2D29FEE9CA00766F9A /* AwsomeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwsomeExtensions.swift; sourceTree = "<group>"; };
-		BD735A2F29FEF1FD00766F9A /* KPIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPIExtensions.swift; sourceTree = "<group>"; };
+		BD735A2D29FEE9CA00766F9A /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		BD735A2F29FEF1FD00766F9A /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		BDD0F6352A06AB0B00E4608B /* AreaEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaEditorView.swift; sourceTree = "<group>"; };
 		BDD0F6372A06AB5F00E4608B /* KPIEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPIEditorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -50,6 +50,93 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52546F2A2C47D6540021A5FD /* Infrustructure */ = {
+			isa = PBXGroup;
+			children = (
+				BD735A2B29FD8F0800766F9A /* Manager.swift */,
+			);
+			path = Infrustructure;
+			sourceTree = "<group>";
+		};
+		52546F2B2C47D7260021A5FD /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				52546F2F2C47D8650021A5FD /* Views */,
+				52546F2E2C47D8490021A5FD /* Screens */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		52546F2C2C47D7900021A5FD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BD7359ED29F9A4EF00766F9A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		52546F2D2C47D7C30021A5FD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BD735A2D29FEE9CA00766F9A /* Date+Ext.swift */,
+				BD735A2F29FEF1FD00766F9A /* Color+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		52546F2E2C47D8490021A5FD /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				529F2F512C47EDDA0046405D /* Main */,
+				529F2F522C47EDF60046405D /* Area */,
+				529F2F532C47EDFF0046405D /* KPI */,
+				529F2F542C47EE940046405D /* Stats */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		52546F2F2C47D8650021A5FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD7359F929F9A5AA00766F9A /* CounterView.swift */,
+				BD7359FB29F9A63700766F9A /* KPIItemView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		529F2F512C47EDDA0046405D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BD735A2729FD35D000766F9A /* KPMainTabView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		529F2F522C47EDF60046405D /* Area */ = {
+			isa = PBXGroup;
+			children = (
+				BDD0F6352A06AB0B00E4608B /* AreaEditorView.swift */,
+				BD7359FD29F9A80700766F9A /* AreaView.swift */,
+			);
+			path = Area;
+			sourceTree = "<group>";
+		};
+		529F2F532C47EDFF0046405D /* KPI */ = {
+			isa = PBXGroup;
+			children = (
+				BDD0F6372A06AB5F00E4608B /* KPIEditorView.swift */,
+			);
+			path = KPI;
+			sourceTree = "<group>";
+		};
+		529F2F542C47EE940046405D /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				BD735A2929FD3B2B00766F9A /* KPStatView.swift */,
+			);
+			path = Stats;
+			sourceTree = "<group>";
+		};
 		BD7359DD29F9A4EC00766F9A = {
 			isa = PBXGroup;
 			children = (
@@ -69,14 +156,10 @@
 		BD7359E829F9A4EC00766F9A /* KPI_III */ = {
 			isa = PBXGroup;
 			children = (
-				BD735A2B29FD8F0800766F9A /* Manager.swift */,
-				BD735A2729FD35D000766F9A /* AreasTabView.swift */,
-				BD735A2929FD3B2B00766F9A /* HomeView.swift */,
-				BDD0F6352A06AB0B00E4608B /* AreaEditorView.swift */,
-				BD7359FD29F9A80700766F9A /* AreaView.swift */,
-				BDD0F6372A06AB5F00E4608B /* KPIEditorView.swift */,
-				BD7359FB29F9A63700766F9A /* KPIItemView.swift */,
-				BD7359F929F9A5AA00766F9A /* CounterView.swift */,
+				52546F2D2C47D7C30021A5FD /* Extensions */,
+				52546F2C2C47D7900021A5FD /* Resources */,
+				52546F2B2C47D7260021A5FD /* Presentation */,
+				52546F2A2C47D6540021A5FD /* Infrustructure */,
 				BDD0F6342A06A8B600E4608B /* Supporting Files */,
 				BD7359EF29F9A4EF00766F9A /* Preview Content */,
 			);
@@ -94,9 +177,6 @@
 		BDD0F6342A06A8B600E4608B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BD735A2F29FEF1FD00766F9A /* KPIExtensions.swift */,
-				BD735A2D29FEE9CA00766F9A /* AwsomeExtensions.swift */,
-				BD7359ED29F9A4EF00766F9A /* Assets.xcassets */,
 				BD7359E929F9A4EC00766F9A /* KPI_IIIApp.swift */,
 			);
 			path = "Supporting Files";
@@ -130,7 +210,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					BD7359E529F9A4EC00766F9A = {
 						CreatedOnToolsVersion = 14.2;
@@ -176,13 +256,13 @@
 				BD7359FE29F9A80700766F9A /* AreaView.swift in Sources */,
 				BD7359FA29F9A5AA00766F9A /* CounterView.swift in Sources */,
 				BD7359EA29F9A4EC00766F9A /* KPI_IIIApp.swift in Sources */,
-				BD735A2A29FD3B2B00766F9A /* HomeView.swift in Sources */,
+				BD735A2A29FD3B2B00766F9A /* KPStatView.swift in Sources */,
 				BD735A2C29FD8F0800766F9A /* Manager.swift in Sources */,
-				BD735A2E29FEE9CA00766F9A /* AwsomeExtensions.swift in Sources */,
-				BD735A2829FD35D000766F9A /* AreasTabView.swift in Sources */,
+				BD735A2E29FEE9CA00766F9A /* Date+Ext.swift in Sources */,
+				BD735A2829FD35D000766F9A /* KPMainTabView.swift in Sources */,
 				BD7359FC29F9A63700766F9A /* KPIItemView.swift in Sources */,
 				BDD0F6362A06AB0B00E4608B /* AreaEditorView.swift in Sources */,
-				BD735A3029FEF1FD00766F9A /* KPIExtensions.swift in Sources */,
+				BD735A3029FEF1FD00766F9A /* Color+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +305,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -285,6 +366,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

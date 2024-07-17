@@ -1,11 +1,11 @@
 import SwiftUI
 
-struct AreasTabView: View {
+struct KPMainTabView: View {
     @ObservedObject var manager: Manager
     
     var body: some View {
         TabView {
-            HomeView(manager: manager)
+            KPStatView(manager: manager)
             
             ForEach(manager.areas.indices, id: \.self) { gkpiIndex in
                 AreaView(manager: manager, area: manager.areas[gkpiIndex], onTap: { kpiIndex, counterIndex in
@@ -72,6 +72,6 @@ struct AreasTabView: View {
 
 struct TabGKPIView_Previews: PreviewProvider {
     static var previews: some View {
-        AreasTabView(manager: Manager())
+        KPMainTabView(manager: Manager())
     }
 }

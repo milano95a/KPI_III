@@ -3,11 +3,11 @@ import SwiftUI
 @main
 struct KPI_IIIApp: App {
     
-    let manager = Manager()
+    @StateObject var manager = Manager()
     
     var body: some Scene {
         WindowGroup {
-            AreasTabView(manager: manager)
+            KPMainTabView(manager: manager)
                 .preferredColorScheme(.dark)
         }
     }

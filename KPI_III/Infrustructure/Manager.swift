@@ -53,9 +53,7 @@ class Manager: ObservableObject {
                 areas = retreivedArea
                 for (i, area) in areas.enumerated() {
                     for (j, kpi) in area.kpis.enumerated() {
-                        if kpi.shouldAddCounter() {
-                            areas[i].kpis[j].addCounter()
-                        }
+                        areas[i].kpis[j].addCounters(kpi.numberOfCountersShouldAdd())
                     }
                 }
             }
