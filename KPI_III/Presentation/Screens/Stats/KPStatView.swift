@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct KPStatView: View {
-    @ObservedObject var manager: Manager
+    @EnvironmentObject var manager: Manager
     @State var showEditorGKPI = false
     
     var body: some View {
@@ -10,7 +10,7 @@ struct KPStatView: View {
                 
             }
             .popover(isPresented: $showEditorGKPI) {
-                AreaEditorView(manager: manager)
+                AreaEditorView()
             }
             .navigationTitle("Home")
             .navigationBarTitleDisplayMode(.inline)
@@ -83,6 +83,6 @@ struct KPStatView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        KPStatView(manager: Manager())
+        KPStatView()
     }
 }

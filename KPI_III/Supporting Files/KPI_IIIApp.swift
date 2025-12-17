@@ -7,7 +7,8 @@ struct KPI_IIIApp: App {
     
     var body: some Scene {
         WindowGroup {
-            KPMainTabView(manager: manager)
+            KPMainTabView()
+                .environmentObject(manager)
                 .preferredColorScheme(.dark)
         }
     }

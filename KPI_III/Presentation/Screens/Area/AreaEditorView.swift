@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AreaEditorView: View {
-    @ObservedObject var manager: Manager
+    @EnvironmentObject var manager: Manager
     @State var name = ""
     @Environment(\.dismiss) var dismiss
     @FocusState var focus: Bool?

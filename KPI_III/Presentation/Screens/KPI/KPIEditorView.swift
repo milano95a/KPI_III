@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct KPIEditorView: View {
-    @ObservedObject var manager: Manager
+    @EnvironmentObject var manager: Manager
     @State var kpiName = ""
     let gkpi: Area
     @FocusState var focus: Bool?

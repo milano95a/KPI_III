@@ -2,7 +2,7 @@ import SwiftUI
 
 struct AreaView: View {
     
-    @ObservedObject var manager: Manager
+    @EnvironmentObject var manager: Manager
     @State var showEditor = false
     @State var showDeleteAlert = false
     
@@ -20,7 +20,7 @@ struct AreaView: View {
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar { toolbar }
                 .popover(isPresented: $showEditor) {
-                    KPIEditorView(manager: manager, gkpi: area)
+                    KPIEditorView(gkpi: area)
                 }
                 .alert("Delete \(area.name)?", isPresented: $showDeleteAlert, actions: {
                     Button(role: .destructive, action: {
@@ -133,7 +133,7 @@ struct View3_Previews: PreviewProvider {
     ]
     
     static var previews: some View {
-        AreaView(manager: Manager(), area: Area(name: "Self-Care", kpis: []), onTap: {_,_ in
+        AreaView(area: Area(name: "Self-Care", kpis: []), onTap: {_,_ in
             
         }, onLongTap: {_,_ in
             

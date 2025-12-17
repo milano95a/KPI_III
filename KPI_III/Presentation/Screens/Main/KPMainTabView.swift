@@ -1,14 +1,14 @@
 import SwiftUI
 
 struct KPMainTabView: View {
-    @ObservedObject var manager: Manager
+    @EnvironmentObject var manager: Manager
     
     var body: some View {
         TabView {
-            KPStatView(manager: manager)
+            KPStatView()
             
             ForEach(manager.areas.indices, id: \.self) { gkpiIndex in
-                AreaView(manager: manager, area: manager.areas[gkpiIndex], onTap: { kpiIndex, counterIndex in
+                AreaView(area: manager.areas[gkpiIndex], onTap: { kpiIndex, counterIndex in
                     manager.increment(gkpiIndex, kpiIndex, counterIndex)
                 }, onLongTap: { kpiIndex, counterIndex in
                     manager.decrement(gkpiIndex, kpiIndex, counterIndex)
@@ -72,6 +72,6 @@ struct KPMainTabView: View {
 
 struct TabGKPIView_Previews: PreviewProvider {
     static var previews: some View {
-        KPMainTabView(manager: Manager())
+        KPMainTabView()
     }
 }
